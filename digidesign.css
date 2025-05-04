@@ -2,7 +2,7 @@
 .container {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(6, 1fr); /* Simplified grid for mobile */
+    grid-template-columns: repeat(6, 1fr); 
     grid-template-rows: auto;
     width: 100%;
     margin: 0 auto;
@@ -17,19 +17,26 @@ body {
     padding: 0;
 }
 
+html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 @font-face {
     font-family: Montserrat;
     src: url('fonts/Montserrat-Light.ttf');
 }
 
-/* Base Typography - Mobile First */
 .title-1 h1 {
-    font-size: 2rem; /* Using relative units */
+    font-size: 2rem; 
     cursor: default;
 }
 
 .title-1 {
-    grid-column: 1 / -1; /* Full width on mobile */
+    grid-column: 1 / -1; 
     margin-top: 1rem;
 }
 
@@ -57,7 +64,6 @@ body {
     line-height: 1.5;
 }
 
-/* Slideshows */
 .slideshow-images img {
     width: 100%;
 }
@@ -105,7 +111,6 @@ body {
     font-weight: bolder;
 }
 
-/* Section Styles - Mobile First */
 .bsu-title {
     grid-column: 1 / -1;
     margin-top: 2rem;
@@ -166,7 +171,7 @@ body {
     margin: 1rem auto;
 }
 
-/* Section 2 */
+
 .title-2 h1 {
     font-size: 2rem;
     cursor: default;
@@ -243,7 +248,7 @@ body {
     margin: 1rem 0;
 }
 
-/* Section 3 */
+
 .title-3 {
     grid-column: 1 / -1;
     margin-top: 2rem;
@@ -258,7 +263,6 @@ body {
     max-width: 100%;
 }
 
-/* Image Gallery - Mobile First (Stack vertically) */
 .img1, .img2, .img3, .img4, .img5, .img6, .img7 {
     grid-column: 1 / -1;
     border: 2px solid white;
@@ -276,10 +280,9 @@ body {
     height: 15px;
     display: block;
     background-color: white;
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 0 0;
 }
 
-/* Tablet Breakpoint */
 @media (min-width: 768px) {
     .container {
         grid-template-columns: repeat(10, 1fr);
@@ -344,7 +347,6 @@ body {
     }
 }
 
-/* Desktop Breakpoint */
 @media (min-width: 1024px) {
     .container {
         grid-template-columns: repeat(14, 1fr);
@@ -357,7 +359,7 @@ body {
     
     .title-1 {
         grid-column: 2 / 8;
-        margin-top: -40px;
+        margin-top: -20px;
     }
     
     .debian-title {
@@ -439,8 +441,7 @@ body {
         grid-column: 6 / 10;
         font-size: 2.5rem;
     }
-    
-    /* Image gallery for desktop */
+
     .img1 {
         grid-column: 4 / 12;
     }
@@ -453,8 +454,6 @@ body {
         grid-column: 9 / 13;
     }
 }
-
-/* Large Desktop Breakpoint */
 @media (min-width: 1329px) {
     .container {
         max-width: 1456px;
