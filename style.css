@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Diwany Thuluth;
+    src: url("fonts/Arbfonts\ Diwany\ Thuluth\ Regular\ -\ [UrduFonts.com].ttf");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Light.ttf');
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: black;
+    margin: 10px 50px;
+    position: relative;
+}
+
+
+.explore a{
+    color:white;
+    background-color: black;
+    margin: 0px 1300px;
+    position: fixed;
+    float: right;
+    text-decoration: none;
+    height: 0px;
+}
+
+.explore a h1 {
+    font-size:27px;
+    font-weight: 400;
+    font-family:'Montserrat';
+}
+
+.explore h3 {
+    font-size: 44px;
+    margin-top:-62px;
+    margin-left: 109px;
+    rotate:45deg;
+    font-weight: 100;
+}
+
+
+.navigation {
+    position: fixed;
+    margin-top: -70px;
+}
+
+.logo {
+    color: white;
+    font-family: "Diwany Thuluth";
+    font-size: 75px;
+    text-decoration: none;
+}
+
+.logo:hover {
+    cursor: grab;
+}
+
+div h1 {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 13px;
+    margin-top: -25px;
+}
+
+.sidebar1 {
+    height: 100%;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: -18px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.sidebar1 a {
+    background-color:black;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: "Montserrat";
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.sidebar1 a:hover {
+    color: black;
+    background-color: white;
+}
+
+
+.contacts {
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 8px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.contacts a {
+    text-decoration: none;
+    background: black;
+    font-family: "Montserrat";
+    color: white;
+    font-size: 14px;
+
+}
+
+.contacts a:hover {
+    background-color: white;
+    color: black;
+}
+
+#vertical-line {
+    height: 730px;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 225px;
+
+}
+
+hr {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 60px;
+    width: 145px;
+    margin-left: -15px;
+}
+
+
+
+  .sidebar {
+    width: 180px;
+    position: fixed;
+    margin-top: 160px;
+    margin-left: 1250px;
+    height: calc(50vh - 40px);
+    background-color: black;
+    border:none;
+    font-family: 'Montserrat';
+    
+}
+
+
+.sidebar-nav li {
+    margin-bottom:30px;
+    list-style: none;
+}
+
+
+.sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    display: block;
+    padding: 8px 6px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+}
+
+.sidebar-nav a.active {
+    background-color:white;
+    color: black;
+    font-weight: 400;
+}
+
+
+
+.content {
+    margin: -30px 250px;
+}
+
+.content h1 {
+    color:white;
+    width:970px;
+    margin-top: 100px;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 53px;
+}
+
+.tools-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(3, 150px);
+    width: max-content;
+    margin: 250px auto;
+}
+
+.logo1 {
+    width: 75px;
+    height:75px;
+    grid-area: 1/1/2/2;
+    align-self: center;
+    justify-self: center;
+}
+.logo2 {
+    width: 75px;
+    height:75px;
+    grid-area: 1/2/2/3;
+    align-self: center;
+    justify-self: center;
+}
+.logo3 {
+    width: 75px;
+    height:75px;
+    grid-area: 1/3/1/4;
+    align-self: center;
+    justify-self: center;
+}
+.logo4 {
+    width: 75px;
+    height:75px;
+    grid-area: 1/4/1/5;
+    align-self: center;
+    justify-self: center;
+}
+.logo5 {
+    width: 75px;
+    height:75px;
+    grid-area: 1/5/1/6;
+    align-self: center;
+    justify-self: center;
+}
+.logo6 {
+    width: 75px;
+    height:75px;
+    grid-area: 2/1/3/2;
+    align-self: center;
+    justify-self: center;
+}
+.logo7 {
+    width: 75px;
+    height:75px;
+    grid-area: 2/2/3/3;
+    align-self: center;
+    justify-self: center;
+}
+
