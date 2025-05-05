@@ -559,7 +559,6 @@ aside {
         grid-template-columns: 1fr;
         grid-template-areas:
             "sidebar"
-            "line"
             "main"
             "contacts";
         max-width: 450px;
