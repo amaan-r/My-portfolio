@@ -4,24 +4,24 @@
 <head>
     <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-    <nav class="navigation">
-        <div>
-            <a class="logo" href="home.html" title="About Me">امان</a>
+    <nav>
+        <div class="logo">
+            <a class="logo-a" href="home.html" title="About Me">امان</a>
             <h1>Amaan | Creator</h1>
         </div>
-        <hr>
-        <div class="sidebar1">
-            <a href="digidesign.html">Digital Design</a>
+
+        <div class="sidebar">
+            <a href="digidesign.html">Digital Design</a><br>
             <a href="menu2">menu</a><br>
             <a href="menu3">menu</a><br>
             <a href="menu4">menu</a><br>
             <a href="menu5">menu</a>
         </div>
-        <hr>
         <div class="contacts">
             <a href="mailto:mamaan04w@gmail.com">E-mail</a>
             <a href="https://www.linkedin.com/in/muhammad-amaan~?utm_source=share&utm_
@@ -30,17 +30,29 @@
             <a href="https://youtube.com/@amaan06?si=F3wCsjmgf3xzofoC">Youtube</a>
             <a href="https://www.instagram.com/manolicious._.36?igsh=MTBkbnl1bDMzcHpxcA==">Instagram</a>
         </div>
+        <div id="vertical-line"></div>
     </nav>
-    <div id="vertical-line"></div>
-    <div class="explore">
-        <a href="explore-page.html">
-            <h1>Explore</h1>
-            <h3>&UpArrow;</h3>
-        </a>
-    </div>
 
-    <aside class="sidebar">
-        <ul class="sidebar-nav">
+    <main>
+        <section id="intro" class="content">
+            <h1>I am Amaan, an aspiring Developer interested in programming, digital design and photography.
+                Always on the look for learning something new and most of my time is spent reading
+                everything I can get my hands on.<br> I'm enrolled as an undergrad at MATI and
+                currently working on my personal portfolio website along an app design project.</h1>
+        </section>
+        <section class="tools-container" id="tools">
+            <img class="logo1" src="images/html-logo.jpg" title="HTML">
+            <img class="logo2" src="images/css-logo.jpg" title="CSS">
+            <img class="logo3" src="images/JS-logo.jpg" title="JavaScript">
+            <img class="logo4" src="images/python-logo.jpg" title="Python">
+            <img class="logo5" src="images/git-logo.jpg" title="Git">
+            <img class="logo6" src="images/github-logo.jpg" title="GitHub">
+            <img class="logo7" src="images/figma-logo1.jpg" title="Figma">
+        </section>
+    </main>
+
+    <aside>
+        <ul class="rightbar">
             <li><a href="#intro" class="active">Introduction</a></li>
             <li><a href="#tools">Tools</a></li>
             <li><a href="#usage">Usage Guide</a></li>
@@ -49,26 +61,10 @@
         </ul>
     </aside>
 
-    <section id="intro" class="content">
-        <h1>I am Amaan, an aspiring Developer interested in programming, digital design and photography.
-            Always on the look for learning something new and most of my time is spent reading
-            everything I can get my hands on.<br> I'm enrolled as an undergrad at MATI and
-            currently working on my personal portfolio website along an app design project.</h1>
-    </section>
-    <section class="tools-container" id="tools">
-    <img class="logo1" src="images/html-logo.jpg" title="HTML">
-    <img class="logo2" src="images/css-logo.jpg" title="CSS">
-    <img class="logo3" src="images/JS-logo.jpg" title="JavaScript">
-    <img class="logo4" src="images/python-logo.jpg" title="Python">
-    <img class="logo5" src="images/git-logo.jpg" title="Git">
-    <img class="logo6" src="images/github-logo.jpg" title="GitHub">
-    <img class="logo7" src="images/figma-logo1.jpg" title="Figma">
-    </section>
-
     <script>
         // Get all sections and navigation links
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.sidebar-nav a');
+        const navLinks = document.querySelectorAll('.rightbar a');
 
         // Function to set active link based on scroll position
         function setActiveLink() {
@@ -116,4 +112,5 @@
     </script>
 
 </body>
+
 </html>
