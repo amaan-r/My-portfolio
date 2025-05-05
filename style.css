@@ -11,45 +11,35 @@
 body {
     font-family: 'Montserrat';
     background-color: black;
-    margin: 10px 50px;
-    position: relative;
+    display:grid;
+    grid-template-columns:1fr 5fr 1fr;
+    grid-template-areas:
+    "nav main aside";
+    margin: 0 auto;
 }
-
-
-.explore a{
-    color:white;
-    background-color: black;
-    margin: 0px 1300px;
-    position: fixed;
-    float: right;
-    text-decoration: none;
-    height: 0px;
+html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
-
-.explore a h1 {
-    font-size:27px;
-    font-weight: 400;
-    font-family:'Montserrat';
-}
-
-.explore h3 {
-    font-size: 44px;
-    margin-top:-62px;
-    margin-left: 109px;
-    rotate:45deg;
-    font-weight: 100;
-}
-
-
-.navigation {
-    position: fixed;
-    margin-top: -70px;
+nav {
+    margin: 0 auto;
+    position: sticky;
+    align-self: baseline;
+    top:0;
 }
 
 .logo {
+    width: 7.22vw;
+    margin: 2vh auto;
+}
+
+.logo-a {
     color: white;
     font-family: "Diwany Thuluth";
-    font-size: 75px;
+    font-size: 76px;
     text-decoration: none;
 }
 
@@ -61,42 +51,37 @@ div h1 {
     font-family: "Montserrat";
     color: white;
     font-size: 13px;
-    margin-top: -25px;
+    margin-top: -3.5vh;
 }
 
-.sidebar1 {
-    height: 100%;
-    width: 150px;
-    margin-top: 50px;
-    margin-left: -18px;
-    line-height: 35px;
+.sidebar {
+    width: 100%;
+    margin: 15vh auto;
+    line-height: 5.5vh;
     text-align: center;
 }
 
-.sidebar1 a {
+.sidebar a {
     background-color:black;
-    position: relative;
     transition: all 0.3s ease;
     font-family: "Montserrat";
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
 }
 
 
-.sidebar1 a:hover {
+.sidebar a:hover {
     color: black;
     background-color: white;
 }
 
 
 .contacts {
-    height: 100px;
     width: 100px;
-    margin-top: 50px;
-    margin-left: 8px;
-    line-height: 27px;
+    margin: -4vh auto;
+    line-height: 4vh;
     text-align: center;
 }
 
@@ -115,85 +100,68 @@ div h1 {
 }
 
 #vertical-line {
-    height: 730px;
+    display: block;
+    height: 100vh;
     border-right: 1px solid rgba(255, 255, 255, 0.7);
-    position: fixed;
-    top: 0;
-    left: 225px;
-
-}
-
-hr {
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 60px;
-    width: 145px;
-    margin-left: -15px;
+    position: absolute;
+    top:0;
+    left:12.5vw;
 }
 
 
 
-  .sidebar {
-    width: 180px;
-    position: fixed;
-    margin-top: 160px;
-    margin-left: 1250px;
-    height: calc(50vh - 40px);
-    background-color: black;
-    border:none;
-    font-family: 'Montserrat';
-    
+aside {
+    margin: 0 auto;
+    position: sticky;
+    align-self: baseline;
+    top:25vh;
+    right:2.3vw;
+    justify-self: center;
+    text-align: center;
+    line-height:7vh;
 }
 
 
-.sidebar-nav li {
-    margin-bottom:30px;
-    list-style: none;
-}
-
-
-.sidebar-nav a {
+.rightbar a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.2em;
     font-weight: 400;
-    display: block;
-    padding: 8px 6px;
-    text-align: center;
     transition: all 0.2s ease;
+    display: block;           
+    padding: 0px 10px;       
+    margin: 15px 0;               
 }
 
-.sidebar-nav a:hover {
+.rightbar a:hover {
     background-color: white;
     color: black;
     font-weight: 400;
+    transform: translateY(-2px); 
+    padding: 1px 10px; 
 }
 
-.sidebar-nav a.active {
+.rightbar a.active {
     background-color:white;
     color: black;
     font-weight: 400;
 }
 
 
-
-.content {
-    margin: -30px 250px;
-}
-
 .content h1 {
     color:white;
-    width:970px;
-    margin-top: 100px;
+    width:65vw;
     font-size: 46px;
     font-weight: 400;
-    line-height: 53px;
+    line-height: 8vh;
+    margin: 10vh auto;
 }
 
 .tools-container {
     display: grid;
     position: relative;
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(5, 22vh);
+    grid-template-rows: repeat(3, 22vh);
     width: max-content;
     margin: 250px auto;
 }
@@ -246,5 +214,537 @@ hr {
     grid-area: 2/2/3/3;
     align-self: center;
     justify-self: center;
+}
+
+@media (max-width: 1329px) {
+    .container {
+        min-width: 1024px;
+    }
+    .logo {
+        width: 8vw;
+        margin: 2vh auto;
+    }
+    
+    .logo-a {
+        font-size: 65px;
+    }
+    
+    div h1 {
+        font-family: "Montserrat";
+        color: white;
+        font-size: 11px;
+        margin-top: -3.5vh;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin: 15vh auto;
+        line-height: 5.5vh;
+        text-align: center;
+    }
+    
+    .sidebar a {
+        background-color:black;
+        transition: all 0.3s ease;
+        font-family: "Montserrat";
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .content h1 {
+       
+        width:65vw;
+        font-size: 35px;
+    }
+    .rightbar a {
+        font-size:0.84em;          
+        padding: 0px 5px;       
+        margin: 10px 0;               
+    }
+    .tools-container {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(5, 15vh);
+        grid-template-rows: repeat(3, 15vh);
+        width: max-content;
+        margin: 250px auto;
+    }
+    #vertical-line {
+        display: block;
+        height: 200vh;
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top:0;
+        left:12.5vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        min-width: 960px;
+    }
+    .logo {
+        width: 7.3vw;
+        margin: 5vh auto;
+    }
+    
+    .logo-a {
+        font-size: 48px;
+    }
+    
+    div h1 {
+        font-family: "Montserrat";
+        color: white;
+        font-size: 8px;
+        margin-top: -3.5vh;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin: 15vh auto;
+        line-height: 5.5vh;
+        text-align: center;
+    }
+    
+    .sidebar a {
+        background-color:black;
+        transition: all 0.3s ease;
+        font-family: "Montserrat";
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .contacts {
+        width: 70px;
+        margin: -4vh auto;
+        line-height: 3.5vh;
+        text-align: center;
+    }
+    
+    .contacts a {
+        text-decoration: none;
+        background: black;
+        font-family: "Montserrat";
+        color: white;
+        font-size: 10px;
+    
+    }
+
+    .content h1 {
+       
+        width:65vw;
+        font-size: 25px;
+    }
+    .rightbar a {
+        font-size:0.75em;          
+        padding: 0px 5px;       
+        margin: 5px 0;               
+    }
+    .tools-container {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(5, 15vh);
+        grid-template-rows: repeat(3, 15vh);
+        width: max-content;
+        margin: 250px auto;
+    }
+    #vertical-line {
+        display: block;
+        height: 200vh;
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top:0;
+        left:12.5vw;
+    }
+    .logo1 {
+        width: 50px;
+        height:50px;
+        grid-area: 1/1/2/2;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo2 {
+        width: 50px;
+        height:50px;
+        grid-area: 1/2/2/3;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo3 {
+        width: 50px;
+        height:50px;
+        grid-area: 1/3/1/4;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo4 {
+        width: 50px;
+        height:50px;
+        grid-area: 1/4/1/5;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo5 {
+        width: 50px;
+        height:50px;
+        grid-area: 1/5/1/6;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo6 {
+        width: 50px;
+        height:50px;
+        grid-area: 2/1/3/2;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo7 {
+        width: 50px;
+        height:50px;
+        grid-area: 2/2/3/3;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width:960px) {
+    .container {
+        min-width:768px;
+    }
+    body {
+        font-family: 'Montserrat';
+        background-color: black;
+        display:grid;
+        grid-template-columns:1fr 4fr 1fr;
+        grid-template-areas:
+        "nav main aside";
+        margin: 0 auto; }
+    .logo {
+        width:8vw;
+        margin: 4vh auto;
+    }
+    
+    .logo-a {
+        font-size: 42px;
+    }
+    
+    div h1 {
+        font-family: "Montserrat";
+        color: white;
+        font-size: 7px;
+        margin-top: -2.5vh;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin: 15vh auto;
+        line-height: 5.5vh;
+        text-align: center;
+    }
+    
+    .sidebar a {
+        background-color:black;
+        transition: all 0.3s ease;
+        font-family: "Montserrat";
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .contacts {
+        width: 70px;
+        margin: -4vh auto;
+        line-height: 3.5vh;
+        text-align: center;
+    }
+    
+    .contacts a {
+        text-decoration: none;
+        background: black;
+        font-family: "Montserrat";
+        color: white;
+        font-size: 9px;
+    
+    }
+
+    .content h1 {
+       
+        width:65vw;
+        font-size: 20px;
+    }
+    .rightbar a {
+        font-size:0.65em;          
+        padding: 0px 5px;       
+        margin: 5px 0;               
+    }
+    .tools-container {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(5, 13vh);
+        grid-template-rows: repeat(3, 13vh);
+        width: max-content;
+        margin: 150px auto;
+    }
+    #vertical-line {
+        display: block;
+        height: 200vh;
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top:0;
+        left:12.5vw;
+    }
+    .logo1 {
+        width: 40px;
+        height:40px;
+        grid-area: 1/1/2/2;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo2 {
+        width: 40px;
+        height:40px;
+        grid-area: 1/2/2/3;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo3 {
+        width: 40px;
+        height:40px;
+        grid-area: 1/3/1/4;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo4 {
+        width: 40px;
+        height:40px;
+        grid-area: 1/4/1/5;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo5 {
+        width: 40px;
+        height:40px;
+        grid-area: 1/5/1/6;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo6 {
+        width: 40px;
+        height:40px;
+        grid-area: 2/1/3/2;
+        align-self: center;
+        justify-self: center;
+    }
+    .logo7 {
+        width: 40px;
+        height:40px;
+        grid-area: 2/2/3/3;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        min-width:450px;
+    }
+    body {
+        font-family: 'Montserrat';
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sidebar"
+            "main"
+            "contacts";
+        width: 450px;
+        margin: 0 auto;
+    }
+    
+    nav {
+        display: contents;
+    }
+    
+    .logo {
+        width: 5vw;
+        margin: 2vh auto;
+        display: none;
+    }
+    
+    .logo-a {
+        color: white;
+        font-family: "Diwany Thuluth";
+        font-size: 35px;
+        text-decoration: none;
+    }
+    
+    .logo:hover {
+        cursor: grab;
+    }
+    
+    div h1 {
+        font-family: "Montserrat";
+        color: white;
+        font-size: 5px;
+        margin-top: -2.5vh;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+        width: 100%;
+        margin: 2vh auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    .sidebar a {
+        background-color: black;
+        transition: all 0.3s ease;
+        font-family: "Montserrat";
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px 10px;
+    }
+    
+    .sidebar a:hover {
+        color: black;
+        background-color: white;
+    }
+    
+    #vertical-line {
+        display:none;
+        width:90%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .contacts {
+        grid-area: contacts;
+        width: 100%;
+        margin: 2vh auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0;
+    }
+    
+    .contacts a {
+        text-decoration: none;
+        background: black;
+        font-family: "Montserrat";
+        color: white;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .contacts a:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    aside {
+        margin: 0 auto;
+        position: sticky;
+        align-self: baseline;
+        top: 25vh;
+        right: 2.3vw;
+        justify-self: center;
+        text-align: center;
+        line-height: 7vh;
+        display: none;
+    }
+    
+    .content {
+        grid-area: main;
+    }
+    
+    .content h1 {
+        color: white;
+        width: 95%;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 5.5vh;
+        margin: 5vh auto;
+        
+    }
+    
+    .tools-container {
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(5, 10vh);
+        grid-template-rows: repeat(3, 10vh);
+        width: max-content;
+        margin: 5vh auto;
+    }
+    
+    .logo1 {
+        width: 40px;
+        height: 40px;
+        grid-area: 1/1/2/2;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo2 {
+        width: 40px;
+        height: 40px;
+        grid-area: 1/2/2/3;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo3 {
+        width: 40px;
+        height: 40px;
+        grid-area: 1/3/1/4;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo4 {
+        width: 40px;
+        height: 40px;
+        grid-area: 1/4/1/5;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo5 {
+        width: 40px;
+        height: 40px;
+        grid-area: 1/5/1/6;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo6 {
+        width: 40px;
+        height: 40px;
+        grid-area: 2/1/3/2;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .logo7 {
+        width: 40px;
+        height: 40px;
+        grid-area: 2/2/3/3;
+        align-self: center;
+        justify-self: center;
+    }
+   
 }
 
