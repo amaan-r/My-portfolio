@@ -559,52 +559,57 @@ aside {
         grid-template-columns: 1fr;
         grid-template-areas:
             "sidebar"
+            "line"
             "main"
             "contacts";
-        width: 450px;
+        max-width: 450px;
+        width: 100%;
         margin: 0 auto;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
-    
+       
     nav {
         display: contents;
     }
-    
+       
     .logo {
         width: 5vw;
         margin: 2vh auto;
         display: none;
     }
-    
+       
     .logo-a {
         color: white;
         font-family: "Diwany Thuluth";
         font-size: 35px;
         text-decoration: none;
     }
-    
+       
     .logo:hover {
         cursor: grab;
     }
-    
+       
     div h1 {
         font-family: "Montserrat";
         color: white;
         font-size: 5px;
         margin-top: -2.5vh;
     }
-    
+       
     .sidebar {
         grid-area: sidebar;
         width: 100%;
-        margin: 2vh auto;
+        margin: 2vh auto 0;
         text-align: center;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 5px;
         padding: 10px 0;
     }
-    
+       
     .sidebar a {
         background-color: black;
         transition: all 0.3s ease;
@@ -615,20 +620,20 @@ aside {
         font-weight: 400;
         padding: 5px 10px;
     }
-    
+       
     .sidebar a:hover {
         color: black;
         background-color: white;
     }
-    
+       
     #vertical-line {
+        grid-area: line;
         display:none;
-        width:90%;
+        width: 90%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-        position: relative;
-        margin: 0 auto;
+        margin: 5px auto 15px;
     }
-
+    
     .contacts {
         grid-area: contacts;
         width: 100%;
@@ -637,24 +642,25 @@ aside {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
         padding: 10px 0;
     }
-    
+       
     .contacts a {
         text-decoration: none;
         background: black;
         font-family: "Montserrat";
         color: white;
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px 10px;
     }
-    
+       
     .contacts a:hover {
         background-color: white;
         color: black;
     }
-    
+       
     aside {
         margin: 0 auto;
         position: sticky;
@@ -666,30 +672,32 @@ aside {
         line-height: 7vh;
         display: none;
     }
-    
+       
     .content {
         grid-area: main;
+        margin-top: 0;
     }
-    
+       
     .content h1 {
         color: white;
         width: 95%;
         font-size: 22px;
         font-weight: 400;
         line-height: 5.5vh;
-        margin: 5vh auto;
-        
+        margin: 5vh auto 5vh;
     }
-    
+       
     .tools-container {
         display: grid;
         position: relative;
-        grid-template-columns: repeat(5, 10vh);
-        grid-template-rows: repeat(3, 10vh);
-        width: max-content;
+        grid-template-columns: repeat(5, minmax(40px, 10vh));
+        grid-template-rows: repeat(3, minmax(40px, 10vh));
+        width: 100%;
+        max-width: 400px;
         margin: 5vh auto;
+        gap: 5px;
     }
-    
+       
     .logo1 {
         width: 40px;
         height: 40px;
@@ -697,7 +705,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo2 {
         width: 40px;
         height: 40px;
@@ -705,7 +713,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo3 {
         width: 40px;
         height: 40px;
@@ -713,7 +721,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo4 {
         width: 40px;
         height: 40px;
@@ -721,7 +729,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo5 {
         width: 40px;
         height: 40px;
@@ -729,7 +737,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo6 {
         width: 40px;
         height: 40px;
@@ -737,7 +745,7 @@ aside {
         align-self: center;
         justify-self: center;
     }
-    
+       
     .logo7 {
         width: 40px;
         height: 40px;
@@ -745,6 +753,4 @@ aside {
         align-self: center;
         justify-self: center;
     }
-   
 }
-
