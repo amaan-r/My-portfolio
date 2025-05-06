@@ -1032,8 +1032,8 @@ aside {
         background: black;
         font-family: "Montserrat";
         color: white;
-        font-size: 12px;
-        padding: 5px 10px;
+        font-size: 11px;
+        padding: 5px 4px;
     }
        
     .contacts a:hover {
