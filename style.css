@@ -1175,7 +1175,7 @@ aside {
     
     .petrol-calc button {
         background-color:black;
-        display: block;
+        display: none;
         border:2px white solid;
         font-size: 0.5em;
         margin:6vh auto;
@@ -1219,7 +1219,7 @@ aside {
     
     .bitsy-game button {
         background-color:black;
-        display: block;
+        display: none;
         border:2px white solid;
         font-size: 0.7em;
         margin:6vh auto;
